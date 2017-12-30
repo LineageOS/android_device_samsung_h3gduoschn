@@ -34,6 +34,9 @@ TARGET_KERNEL_CONFIG := lineage_h3gduoschn_defconfig
 # NFC
 include $(COMMON_PATH)/nfc/bcm2079x/board.mk
 
+# Radio/RIL
+include $(COMMON_PATH)/radio/dual/board.mk
+
 # SELinux
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 

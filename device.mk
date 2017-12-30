@@ -36,5 +36,4 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 $(call inherit-product, device/samsung/hlte-common/nfc/bcm2079x/product.mk)
 
 # Radio
-PRODUCT_PACKAGES += \
-    rild_dsda.rc
+$(call inherit-product, device/samsung/hlte-common/radio/dual/product.mk)
