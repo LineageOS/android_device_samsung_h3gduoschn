@@ -16,13 +16,9 @@
 DEVICE_PATH := device/samsung/h3gduoschn
 
 # inherit from common hlte
--include device/samsung/hlte-common/BoardConfigCommon.mk
+include device/samsung/hlte-common/BoardConfigCommon.mk
 
 TARGET_OTA_ASSERT_DEVICE := h3g,h3gduoschn,h3gduoszn
-
-# Audio
-AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
-AUDIO_FEATURE_SAMSUNG_DUAL_SIM := true
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm8974
@@ -33,6 +29,9 @@ TARGET_KERNEL_CONFIG := lineage_h3gduoschn_defconfig
 
 # NFC
 include $(COMMON_PATH)/nfc/bcm2079x/board.mk
+
+# Radio/RIL
+include $(COMMON_PATH)/radio/dual/board.mk
 
 # SELinux
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
