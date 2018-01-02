@@ -34,5 +34,8 @@ TARGET_KERNEL_CONFIG := lineage_h3gduoschn_defconfig
 # SELinux
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
+# NFC
+include $(COMMON_PATH)/nfc/bcm2079x/board.mk
+
 # inherit from the proprietary version
 -include vendor/samsung/h3gduoschn/BoardConfigVendor.mk
