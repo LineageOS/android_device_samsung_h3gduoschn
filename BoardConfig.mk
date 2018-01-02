@@ -31,6 +31,9 @@ TARGET_LIBINIT_MSM8974_DEFINES_FILE := device/samsung/h3gduoschn/init/init_h3gdu
 # Kernel
 TARGET_KERNEL_CONFIG := lineage_h3gduoschn_defconfig
 
+# NFC
+include $(COMMON_PATH)/nfc/bcm2079x/board.mk
+
 # SELinux
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
