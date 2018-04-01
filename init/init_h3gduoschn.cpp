@@ -84,10 +84,10 @@ void init_target_properties()
 
     if (bootloader.find("N9002") == 0) {
         /* h3gduoszn */
-        property_override("ro.build.fingerprint", "samsung/h3gduoszn/hlte:5.0/LRX21V/N9002ZNSGQA1:user/release-keys");
+        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/h3gduoszn/hlte:5.0/LRX21V/N9002ZNSGQA1:user/release-keys");
         property_override("ro.build.description", "h3gduoszn-user 5.0 LRX21V N9002ZNSGQA1 release-keys");
-        property_override("ro.product.model", "SM-N9002");
-        property_override("ro.product.device", "h3gduoszn");
+        property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-N9002");
+        property_override_dual("ro.product.device", "ro.vendor.product.device", "h3gduoszn");
         gsm_properties("02");
     }
 
