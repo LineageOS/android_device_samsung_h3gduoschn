@@ -20,6 +20,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/samsung/h3gduoschn/h3gduoschn-vendor.mk)
 
+# Common hlte
+$(call inherit-product, device/samsung/hlte-common/hlte.mk)
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
@@ -45,6 +48,3 @@ PRODUCT_COPY_FILES += \
 # Radio
 PRODUCT_PACKAGES += \
     rild_dsda.rc
-
-# Common hlte
-$(call inherit-product, device/samsung/hlte-common/hlte.mk)
