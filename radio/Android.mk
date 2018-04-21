@@ -1,4 +1,5 @@
-# Copyright (C) 2014 The CyanogenMod Project
+#
+# Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,16 +12,13 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+LOCAL_PATH:= $(call my-dir)
 
-# Inherit from hlte device
-$(call inherit-product, device/samsung/hlte/device.mk)
-
-# Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := full_hltexx
-PRODUCT_DEVICE := hltexx
-PRODUCT_BRAND := samsung
-PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := hlte
+include $(CLEAR_VARS)
+LOCAL_MODULE               := rild_dsda.rc
+LOCAL_MODULE_CLASS         := ETC
+LOCAL_SRC_FILES            := rild_dsda.rc
+LOCAL_MODULE_RELATIVE_PATH := init
+include $(BUILD_PREBUILT)

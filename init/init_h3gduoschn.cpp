@@ -1,6 +1,6 @@
 /*
    Copyright (c) 2013, The Linux Foundation. All rights reserved.
-   Copyright (c) 2017, The LineageOS Project. All rights reserved.
+   Copyright (c) 2017-2018, The LineageOS Project. All rights reserved.
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
@@ -63,15 +63,13 @@ void cdma_properties(char const *operator_alpha,
 
     /* Static CDMA Properties */
     property_set("ril.subscription.types", "NV,RUIM");
-    property_set("telephony.lteOnCdmaDevice", "1");
 }
 
 void gsm_properties(char const *rild_lib_variant)
 {
     set_rild_libpath(rild_lib_variant);
 
-    property_set("ro.telephony.default_network", "9");
-    property_set("telephony.lteOnGsmDevice", "1");
+    property_set("ro.telephony.default_network", "0,1");
 }
 
 #define ISMATCH(a, b) (!strncmp((a), (b), PROP_VALUE_MAX))
@@ -90,22 +88,13 @@ void init_target_properties()
 
     property_get("ro.bootloader", bootloader, NULL);
 
-    if (strstr(bootloader, "N9005")) {
-        /* hltexx */
-        property_override("ro.build.fingerprint", "samsung/hltexx/hlte:5.0/LRX21V/N9005XXSGBQD5:user/release-keys");
-        property_override("ro.build.description", "hltexx-user 5.0 LRX21V N9005XXSGBQD5 release-keys");
-        property_override("ro.product.model", "SM-N9005");
-        property_override("ro.product.device", "hlte");
-        gsm_properties("gsm");
-    } else if (strstr(bootloader, "N900P")) {
-        /* hltespr - Sprint */
-        property_override("ro.build.fingerprint", "samsung/hltespr/hltespr:5.0/LRX21V/N900PVPSEPL1:user/release-keys");
-        property_override("ro.build.description", "hltespr-user 5.0 LRX21V N900PVPSEPL1 release-keys");
-        property_override("ro.product.model", "SM-N900P");
-        property_override("ro.product.device", "hltespr");
-        cdma_properties("Sprint", "310120", "8", "1", "spr");
-    } else {
-        gsm_properties("gsm");
+    if (strstr(bootloader, "N9002")) {
+        /* h3gduoszn */
+        property_override("ro.build.fingerprint", "samsung/h3gduoszn/hlte:5.0/LRX21V/N9002ZNSGQA1:user/release-keys");
+        property_override("ro.build.description", "h3gduoszn-user 5.0 LRX21V N9002ZNSGQA1 release-keys");
+        property_override("ro.product.model", "SM-N9002");
+        property_override("ro.product.device", "h3gduoszn");
+        gsm_properties("02");
     }
 
     property_get("ro.product.device", device, NULL);

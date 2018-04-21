@@ -1,7 +1,5 @@
-#!/bin/bash
-#
-# Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2018 The LineageOS Project
+# Copyright (C) 2014-2016 The CyanogenMod Project
+# Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,13 +12,16 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-set -e
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-export DEVICE=h3gduoschn
-export DEVICE_COMMON=hlte-common
-export VARIANT_COPYRIGHT_YEAR=2018
-export VENDOR=samsung
+# Inherit from h3gduoschn device
+$(call inherit-product, device/samsung/h3gduoschn/device.mk)
 
-./../$DEVICE_COMMON/setup-makefiles.sh $@
+# Set those variables here to overwrite the inherited values.
+PRODUCT_NAME := full_h3gduoschn
+PRODUCT_DEVICE := h3gduoschn
+PRODUCT_BRAND := samsung
+PRODUCT_MANUFACTURER := samsung
+PRODUCT_MODEL := h3gduoschn
