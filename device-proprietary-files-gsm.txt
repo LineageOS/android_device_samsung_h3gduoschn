@@ -1,4 +1,4 @@
 # Radio - pinned to N9002CHUGQA1_N9002CHUGQA1_CHU
 lib/libsec-ril-cdma.so:vendor/lib/libsec-ril.02.so|b3152ad4bda75d05ee18df8bb5203fd212a05038
 lib/libsec-ril.so:vendor/lib/libsec-ril-dsda.02.so|9ecb9d6fe2087c3e2b2449f6a74dd37bf6ce5a43
--sbin/cbd:rootfs
+-sbin/cbd;rootfs
