@@ -41,7 +41,7 @@ using android::init::property_set;
 
 void set_rild_libpath(char const *variant)
 {
-    std::string libpath("/system/vendor/lib/libsec-ril.");
+    std::string libpath("/vendor/lib/libsec-ril.");
     libpath += variant;
     libpath += ".so";
 
