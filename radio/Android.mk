@@ -21,4 +21,5 @@ LOCAL_MODULE               := rild_dsda.rc
 LOCAL_MODULE_CLASS         := ETC
 LOCAL_SRC_FILES            := rild_dsda.rc
 LOCAL_MODULE_RELATIVE_PATH := init
+LOCAL_VENDOR_MODULE        := true
 include $(BUILD_PREBUILT)
