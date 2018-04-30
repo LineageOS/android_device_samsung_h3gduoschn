@@ -16,6 +16,7 @@ service ril-daemon2 /vendor/bin/hw/rild -l /vendor/lib/libsec-ril-dsda.02.so -c 
 service cpboot-daemon /sbin/cbd -d -p 21
     class main
     user root
-    group radio cache inet misc audio sdcard_rw log sdcard_r
-    seclabel u:r:cbd:s0
+    group radio cache inet misc audio log readproc sdcard_rw
+    capabilities DAC_OVERRIDE
     onrestart restart ril-daemon2
+    seclabel u:r:cbd:s0
