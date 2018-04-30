@@ -1,0 +1,5 @@
+dev.silentlog.on                                        u:object_r:cbd_prop:s0
+ril.cbd.                                                u:object_r:cbd_prop:s0
+ril.deviceOffRes                                        u:object_r:cbd_prop:s0
+ro.debug_level                                          u:object_r:cbd_prop:s0
+sys.deviceOffReq                                        u:object_r:cbd_prop:s0
