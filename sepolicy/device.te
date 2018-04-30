@@ -1,0 +1,2 @@
+type cbd_device, dev_type;
+type radio_block_device, dev_type;

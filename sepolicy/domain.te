@@ -1,0 +1,2 @@
+type cbd, domain;
+domain_trans(init, rootfs, cbd)

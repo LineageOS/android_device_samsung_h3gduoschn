@@ -1,1 +1,6 @@
-/sbin/cbd                                               u:object_r:cbd_exec:s0
+/dev/__cbd_msg_                                         u:object_r:cbd_device:s0
+/dev/block/mmcblk0p10                                   u:object_r:radio_block_device:s0
+/dev/gsm_boot0                                          u:object_r:radio_device:s0
+/dev/gsm_ipc0                                           u:object_r:radio_device:s0
+/dev/gsm_rfs0                                           u:object_r:radio_device:s0
+/sys/devices/virtual/sec/switch/uart_sel                u:object_r:radio_sysfs:s0
