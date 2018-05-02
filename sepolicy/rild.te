@@ -1,1 +1,1 @@
-get_prop(rild, cbd_prop)
+set_prop(rild, cbd_prop)
