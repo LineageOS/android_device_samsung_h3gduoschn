@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "205d0b63_750d6bd4",
+        "filename": "sepolicy/cbd.te",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 11801
+      },
+      "writtenOn": "2018-05-04T00:47:11Z",
+      "side": 1,
+      "message": "On 14.1, they\u0027re not labelled differently, and I *really* shouldn\u0027t mess with labelling the /proc nodes at a device level. I don\u0027t want to deal with the cascade effect of the rest of the system expecting to be able to read it (nor should I be doing so).",
+      "parentUuid": "8e8da1c7_5df6190f",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 33
+      },
+      "revId": "5c8341ad72dfb202ec514deda2ba66ee6b71f8c9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "de62ec27_1990c7ef",
         "filename": "sepolicy/cbd.te",
         "patchSetId": 5
@@ -36,6 +60,30 @@
       "writtenOn": "2018-05-04T00:43:35Z",
       "side": 1,
       "message": "Can you not figure out which user/group this should really run as instead?",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 50
+      },
+      "revId": "5c8341ad72dfb202ec514deda2ba66ee6b71f8c9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f72e1744_2abb2e3c",
+        "filename": "sepolicy/cbd.te",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 11801
+      },
+      "writtenOn": "2018-05-04T00:47:11Z",
+      "side": 1,
+      "message": "On 15.1, when I ran cbd as radio, init couldn\u0027t even execute it. So, I don\u0027t think so.",
+      "parentUuid": "de62ec27_1990c7ef",
       "range": {
         "startLine": 7,
         "startChar": 0,
