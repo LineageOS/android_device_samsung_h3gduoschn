@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e8da1c7_5df6190f",
+        "filename": "sepolicy/cbd.te",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 15173
+      },
+      "writtenOn": "2018-05-04T00:43:35Z",
+      "side": 1,
+      "message": "Can we limit which proc nodes this can read?",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 33
+      },
+      "revId": "5c8341ad72dfb202ec514deda2ba66ee6b71f8c9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "de62ec27_1990c7ef",
+        "filename": "sepolicy/cbd.te",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 15173
+      },
+      "writtenOn": "2018-05-04T00:43:35Z",
+      "side": 1,
+      "message": "Can you not figure out which user/group this should really run as instead?",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 50
+      },
+      "revId": "5c8341ad72dfb202ec514deda2ba66ee6b71f8c9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
