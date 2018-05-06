@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "4579ce46_d9549d34",
+        "filename": "sepolicy/cbd.te",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 15173
+      },
+      "writtenOn": "2018-05-06T07:21:03Z",
+      "side": 1,
+      "message": "What nodes are being read? cpboot-daemon absolutely should not have free reign to read all of /proc.",
+      "parentUuid": "205d0b63_750d6bd4",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 33
+      },
+      "revId": "5c8341ad72dfb202ec514deda2ba66ee6b71f8c9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "de62ec27_1990c7ef",
         "filename": "sepolicy/cbd.te",
         "patchSetId": 5
@@ -84,6 +108,30 @@
       "side": 1,
       "message": "On 15.1, when I ran cbd as radio, init couldn\u0027t even execute it. So, I don\u0027t think so.",
       "parentUuid": "de62ec27_1990c7ef",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 50
+      },
+      "revId": "5c8341ad72dfb202ec514deda2ba66ee6b71f8c9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a9b9ca65_51a3c994",
+        "filename": "sepolicy/cbd.te",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 15173
+      },
+      "writtenOn": "2018-05-06T07:21:03Z",
+      "side": 1,
+      "message": "setuid is ok-ish, but dac_override is horribad.",
+      "parentUuid": "f72e1744_2abb2e3c",
       "range": {
         "startLine": 7,
         "startChar": 0,
