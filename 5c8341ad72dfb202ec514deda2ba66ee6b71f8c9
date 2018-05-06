@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "323e24cd_ffb2eb8f",
+        "filename": "sepolicy/cbd.te",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 11801
+      },
+      "writtenOn": "2018-05-06T13:08:16Z",
+      "side": 1,
+      "message": "/proc/stat and /proc/meminfo. What exactly in proc is harmful for it to have access to? And why should I be the one to relabel nodes that are globally labelled? This absolutely is not the only case of being able to read all of proc when only 1 or 2 nodes is needed. Google themselves restricted that in 15.1 by labelling stat and meminfo separately, but this is still 14.1, and relabelling global nodes in one device tree will cascade into denials I have to fix as a result of doing that.",
+      "parentUuid": "4579ce46_d9549d34",
+      "range": {
+        "startLine": 3,
+        "startChar": 0,
+        "endLine": 3,
+        "endChar": 33
+      },
+      "revId": "5c8341ad72dfb202ec514deda2ba66ee6b71f8c9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "de62ec27_1990c7ef",
         "filename": "sepolicy/cbd.te",
         "patchSetId": 5
@@ -132,6 +156,30 @@
       "side": 1,
       "message": "setuid is ok-ish, but dac_override is horribad.",
       "parentUuid": "f72e1744_2abb2e3c",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 50
+      },
+      "revId": "5c8341ad72dfb202ec514deda2ba66ee6b71f8c9",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3f8a3da3_b215a3ba",
+        "filename": "sepolicy/cbd.te",
+        "patchSetId": 5
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 11801
+      },
+      "writtenOn": "2018-05-06T13:08:16Z",
+      "side": 1,
+      "message": "I\u0027d be happy to see an alternative, but cbd has create_file_perms, so it only makes sense it would need dac_override to set permissions on said file/node.",
+      "parentUuid": "a9b9ca65_51a3c994",
       "range": {
         "startLine": 7,
         "startChar": 0,
